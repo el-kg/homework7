@@ -70,8 +70,8 @@ public class Main {
         } else {
             System.out.println("Не коректно введеное число первой пятницы!!!!");
         }
-        // задание 8
-        System.out.println("задание 8");
+        // Задание 8
+        System.out.println("Задание 8");
         int commetVisiting = 79;
         for (int a = 1; commetVisiting <= 2023; a++) {
             commetVisiting = commetVisiting + 79;
