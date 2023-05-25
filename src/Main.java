@@ -6,7 +6,7 @@ public class Main {
         int total = 0;
         int month = 1;
         int expectedAmount = 2_459_000;
-        while (total <= expectedAmount) {
+        while (total < expectedAmount) {
             total = total + deposit;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей.");
             month++;
@@ -26,25 +26,30 @@ public class Main {
         System.out.println("задание 3");
         int population = 12_000_000;
         int birthRate;
+        int birthRateСoefficient = 17;
         int mortalityRate;
-        for (int year = 2023; year <= 2033; year++) {
-            birthRate = (population / 1000) * 17;
-            mortalityRate = (population / 1000) * 8;
+        int mortalityRateСoefficient = 8;
+        int year = 2023;
+        for (int i = year; i <= year + 10; i++) {
+            birthRate = (population / 1000) * birthRateСoefficient;
+            mortalityRate = (population / 1000) * mortalityRateСoefficient;
             population = population + birthRate - mortalityRate;
-            System.out.println("Год " + year + " , численность населения страны Y составляет  " + population);
+            System.out.println("Год " + i + " , численность населения страны Y составляет  " + population);
         }
         // задание 4
         System.out.println("задание 4");
         int depositVasil1 = 15000;
-        for (int i = 1; depositVasil1 <= 12_000_000; i++) {
-            depositVasil1 = depositVasil1 + ((depositVasil1 / 100) * 7);
+        int wantedMoney = 12_000_000;
+        int bankPercent = 7;
+        for (int i = 1; depositVasil1 < wantedMoney; i++) {
+            depositVasil1 = depositVasil1 + ((depositVasil1 / 100) * bankPercent);
             System.out.println("Месяц " + i + " сумма накоплений " + depositVasil1);
         }
         // задание 5
         System.out.println("задание 5");
         int depositVasil2 = 15000;
-        for (int i = 1; depositVasil2 <= 12_000_000; i++) {
-            depositVasil2 = depositVasil2 + ((depositVasil2 / 100) * 7);
+        for (int i = 1; depositVasil2 < wantedMoney; i++) {
+            depositVasil2 = depositVasil2 + ((depositVasil2 / 100) * bankPercent);
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений " + depositVasil2);
             }
@@ -53,7 +58,7 @@ public class Main {
         System.out.println("задание 6");
         int depositVasil3 = 15000;
         for (int i = 1; i <= (12 * 9); i++) {
-            depositVasil3 = depositVasil3 + ((depositVasil3 / 100) * 7);
+            depositVasil3 = depositVasil3 + ((depositVasil3 / 100) * bankPercent);
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений " + depositVasil3);
             }
@@ -72,8 +77,8 @@ public class Main {
         // Задание 8
         System.out.println("Задание 8");
         int commetVisiting = 79;
-        for (; commetVisiting <= 2123; commetVisiting += 79) {
-            if (commetVisiting >= 1823) {
+        for (; commetVisiting <= year + 100; commetVisiting += 79) {
+            if (commetVisiting >= year - 200) {
                 System.out.println(commetVisiting);
             }
         }
